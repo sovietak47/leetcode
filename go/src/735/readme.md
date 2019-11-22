@@ -39,9 +39,8 @@
     
 说明:
 
-数组 asteroids 的长度不超过 10000。
-
-每一颗行星的大小都是非零整数，范围是 [-1000, 1000] 。
+*数组 asteroids 的长度不超过 10000。
+*每一颗行星的大小都是非零整数，范围是 [-1000, 1000] 。
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/asteroid-collision
