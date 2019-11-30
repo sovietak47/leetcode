@@ -62,5 +62,34 @@ a[1]<a[n-3],a[2]<a[n-3],a[3]>a[n-3],
 
 
 func maxArea(height []int) int {
+	heightlen := len(height)
+	if heightlen == 0 {
+		return 0
+	}
 
+	area := 0
+	headIndex := 0
+	tailIndex := heightlen -1
+
+	for headIndex < tailIndex {
+		newArea := min(height[headIndex], height[tailIndex]) * (tailIndex - headIndex)
+		if newArea > area {
+			area = newArea
+		}
+
+		if height[headIndex] >= height[tailIndex] {
+			tailIndex--
+		} else {
+			headIndex++
+		}
+	}
+
+	return area
+}
+
+func min (a,b int) int {
+	if a > b {
+		return b
+	}
+	return  a
 }
